@@ -1,0 +1,16 @@
+<view>
+    <view id="view_ads">
+        <ad adTheme="white" adType="video" unitId="视频广告"></ad>
+    </view>
+    <view class="hot-tips-pancel-image">
+        <view bindtap="btn_info_click" data-index="{{index}}" data-keyword="{{item}}" wx:for="{{biaoqingCollectionList}}" wx:key="item">
+            <view class="image_kuang_right">
+                <view>
+                    <image class="image-kuan" src="{{item.imagePath}}"></image>
+                </view>
+                <view class="bqb_tips">{{tools.sub(item.title)}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+<wxs module="tools" src="../../wxs/subutil.wxs" />

@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/collection/collection",
+    "pages/my/my",
+    "pages/seach_detail/seach_detail",
+    "pages/image_detail/image_detail",
+    "pages/square/square",
+    "pages/my_info/my_info"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#ffda44",
+    "navigationBarTitleText": "小迪表情包"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wxd686188c74385e61",
+    "wxd65955b803252225",
+    "wx536518ea36d57e76"
+  ],
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

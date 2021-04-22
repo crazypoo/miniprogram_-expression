@@ -1,0 +1,55 @@
+<view id="view_ads">
+    <ad adTheme="white" adType="video" unitId="视频广告"></ad>
+</view>
+<view class="image_detail_box">
+    <view class="image_detail_head">
+        <image bindtap="show_image" class="image-detail-kuan" src="{{imagePath}}"></image>
+    </view>
+</view>
+<view class="grids">
+    <view bindtap="down_load_image" class="grid">
+        <view class="grid-icon">
+            <image class="ico_btn_image" src="/images/save_ico.png"></image>
+        </view>
+        <view class="grid-title">下载表情</view>
+    </view>
+    <view bindtap="onShareAppMessage" class="grid" openType="share">
+        <button bindtap="onShareAppMessage" openType="share" plain="true" style="border:0">
+            <view class="grid-icon-share">
+                <image class="ico_btn_image" src="/images/share.png"></image>
+            </view>
+            <view class="grid-title">分享表情</view>
+        </button>
+    </view>
+    <view bindtap="goxcx" class="grid">
+        <view class="grid-icon">
+            <image class="ico_btn_image" src="/images/b.jpg"></image>
+        </view>
+        <view class="grid-title">个性头像</view>
+    </view>
+    <view bindtap="goxcx2" class="grid">
+        <view class="grid-icon">
+            <image class="ico_btn_image" src="/images/bz.png"></image>
+        </view>
+        <view class="grid-title">壁纸背景图</view>
+    </view>
+</view>
+<ad adTheme="white" adType="video" unitId="视频广告"></ad>
+<view class="layout_vertical">
+    <view></view>
+    <view class="hot-tips-pancel">
+        <view class="left_hr"></view>
+        <view class="hot_tips_text">相关推荐</view>
+    </view>
+    <view class="hot-tips-pancel-image">
+        <view bindtap="images_btn_info" data-index="{{index}}" data-keyword="{{item}}" wx:for="{{biaoqingbaoList}}" wx:key="item">
+            <view class="image_kuang_right">
+                <view bindtap="btn_info_cang" data-keyword="{{item}}">
+                    <image class="image-kuan" src="{{item.imagePath}}"></image>
+                </view>
+                <view class="bqb_tips">{{tools.sub(item.title)}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+<wxs module="tools" src="../../wxs/subutil.wxs" />

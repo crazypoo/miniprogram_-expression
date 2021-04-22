@@ -1,0 +1,34 @@
+<template name="pic_tpl">
+    <view class="list-item">
+        <view class="item-header">
+            <view class="header-img">
+                <image class="img" src="../../images/header.jpg"></image>
+            </view>
+            <text class="header-name">逗比</text>
+            <text class="header-time">{{item.updatetime}}</text>
+        </view>
+        <view class="item-body">
+            <text>{{item.content}}</text>
+            <image class="body-img" src="{{item.url}}"></image>
+        </view>
+    </view>
+</template>
+<template name="joke_tpl">
+    <view class="list-item">
+        <view class="item-header">
+            <view class="header-img">
+                <image class="img" src="../../images/header.jpg"></image>
+            </view>
+            <text class="header-name">逗比</text>
+            <text class="header-time">{{item.updatetime}}</text>
+        </view>
+        <view class="item-body">
+            <text>{{item.content}}</text>
+        </view>
+    </view>
+</template>
+<template name="rec_list">
+    <scroll class="scroll-box" lowerThreshold="50" scrollY="true" upperThreshold="50">
+        <template is="{{item.url?'pic_tpl':'joke_tpl'}}" data="{{item:item}}" wx:for="{{req}}" wx:key="item.id"></template>
+    </scroll>
+</template>

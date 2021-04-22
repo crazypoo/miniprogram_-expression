@@ -1,0 +1,23 @@
+<view class="seach_detail_box">
+    <view wx:if="{{datatotal===0}}">
+        <view class="cang_content_msg">
+            <text class="text_he">抱歉，未搜索到您想要的表情包！</text>
+            <text>小编正在快马加鞭，准备表情包数据！</text>
+            <image class="search_tishi" src="https://wx.biaoqingzhushou.com/emoticon-cms/profile/upload/kll.gif"></image>
+        </view>
+    </view>
+    <view class="ad_view">
+        <ad adTheme="white" adType="video" unitId="视频广告"></ad>
+    </view>
+    <view class="hot-tips-pancel-image">
+        <view data-index="{{index}}" data-keyword="{{item}}" wx:for="{{biaoqingbaoList}}" wx:key="item">
+            <view class="image_kuang_right">
+                <view bindtap="btn_info_cang" data-keyword="{{item}}">
+                    <image class="image-kuan" src="{{item.imagePath}}"></image>
+                </view>
+                <view class="bqb_tips">{{tools.sub(item.title)}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+<wxs module="tools" src="../../wxs/subutil.wxs" />

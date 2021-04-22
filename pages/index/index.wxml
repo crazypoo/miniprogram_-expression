@@ -1,0 +1,111 @@
+<view class="box" wx:if="{{SHOW_TOP}}">
+    <view class="arrow"></view>
+    <view bindtap="showModal" class="body">
+        <text>点击「添加小程序」，下次访问更便捷 ></text>
+    </view>
+</view>
+<view class="main_app">
+    <swiper autoplay="true" class="swiper" duration="1000" indicatorDots="true" interval="5000">
+        <view bindtap="banner_btn" data-keyword="{{item}}" wx:for="{{bannerList}}" wx:key="item">
+            <swiper-item>
+                <image class="slide-image" mode="aspectFill" src="{{item.url}}"></image>
+            </swiper-item>
+        </view>
+    </swiper>
+    <view class="wxSearch-section">
+        <view class="wxSearch-pancel">
+            <input bindblur="wxSearchBlur" bindfocus="wxSerchFocus" bindinput="wxSearchInput" class="wxSearch-input" placeholder="请输入表情关键词" value=""></input>
+            <button bindtap="wxSearchFn" class="wxSearch-button" plain="true" size="mini">搜索</button>
+        </view>
+    </view>
+    <view class="list-item">
+        <view class="hot-tips-pancel">
+            <view class="left_hr"></view>
+            <view class="hot_tips_text">热门搜索</view>
+            <view bindtap="huanyihuan" class="hot_tips_text-more">换一换</view>
+        </view>
+        <view class="tips-view">
+            <view bindtap="searchByKeyword" class="search-keyword-item" data-keyword="{{item}}" wx:for="{{biaoqingtips}}" wx:key="item">{{item.biaoqingTips}}</view>
+        </view>
+    </view>
+    <view class="list-item">
+        <view class="layout_vertical">
+            <view class="hot-tips-pancel">
+                <view class="left_hr"></view>
+                <view class="hot_tips_text">{{hotbiaoqing.title}}</view>
+                <view bindtap="bb_xiaobian_btn_more" class="hot_tips_text-more" data-keyword="{{hotbiaoqing.title}}">更多>></view>
+            </view>
+            <view class="hot-tips-pancel-image">
+                <view bindtap="bb_image_btn_info" data-keyword="{{item}}" wx:for="{{hotbiaoqing.biaoqingList}}" wx:key="item">
+                    <view class="image_kuang_right">
+                        <image class="image-kuan" src="{{item.imagePath}}"></image>
+                        <view class="bqb_tips">{{tools.sub(item.title)}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view id="view_ads">
+    
+        <ad adTheme="white" adType="video" unitId="视频广告"></ad>
+    </view>
+    <view class="list-item">
+        <view class="layout_vertical">
+            <view class="hot-tips-pancel">
+                <view class="left_hr"></view>
+                <view class="hot_tips_text">{{xbbiaoqing.title}}</view>
+                <view bindtap="bb_xiaobian_btn_more" class="hot_tips_text-more" data-keyword="{{xbbiaoqing.title}}">更多>></view>
+            </view>
+            <view class="hot-tips-pancel-image">
+                <view bindtap="bb_image_btn_info" data-keyword="{{item}}" wx:for="{{xbbiaoqing.biaoqingList}}" wx:key="item">
+                    <view class="image_kuang_right">
+                        <view>
+                            <image class="image-kuan" src="{{item.imagePath}}"></image>
+                        </view>
+                        <view class="bqb_tips">{{tools.sub(item.title)}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="list-item">
+        <view class="layout_vertical">
+            <view class="hot-tips-pancel">
+                <view class="left_hr"></view>
+                <view class="hot_tips_text">{{zrbiaoqing.title}}</view>
+                <view bindtap="bb_xiaobian_btn_more" class="hot_tips_text-more" data-keyword="{{zrbiaoqing.title}}">更多>></view>
+            </view>
+            <view class="hot-tips-pancel-image">
+                <view bindtap="bb_image_btn_info" data-keyword="{{item}}" wx:for="{{zrbiaoqing.biaoqingList}}" wx:key="item">
+                    <view class="image_kuang_right">
+                        <view>
+                            <image class="image-kuan" src="{{item.imagePath}}"></image>
+                        </view>
+                        <view class="bqb_tips">{{tools.sub(item.title)}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <ad adTheme="white" adType="video" unitId="视频广告"></ad>
+    <view class="list-item">
+        <view class="layout_vertical">
+            <view class="hot-tips-pancel">
+                <view class="left_hr"></view>
+                <view class="hot_tips_text">{{qlrbiaoqing.title}}</view>
+                <view bindtap="bb_xiaobian_btn_more" class="hot_tips_text-more" data-keyword="{{qlrbiaoqing.title}}">更多>></view>
+            </view>
+            <view class="hot-tips-pancel-image">
+                <view bindtap="bb_image_btn_info" data-keyword="{{item}}" wx:for="{{qlrbiaoqing.biaoqingList}}" wx:key="item">
+                    <view class="image_kuang_right">
+                        <view>
+                            <image class="image-kuan" src="{{item.imagePath}}"></image>
+                        </view>
+                        <view class="bqb_tips">{{tools.sub(item.title)}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<wxs module="tools" src="../../wxs/subutil.wxs" />

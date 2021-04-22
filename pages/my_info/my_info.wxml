@@ -1,0 +1,16 @@
+<import src="../../components/list.wxml"></import>
+<view>
+    <view></view>
+</view>
+<ad adTheme="white" adType="grid" gridCount="5" gridOpacity="0.8" unitId="格子广告"></ad>
+<template is="list" data="{{cells:cells}}"></template>
+<view class="cells">
+    <view class="cell">
+        <button hoverClass="none" openType="contact">联系作者</button>
+    </view>
+</view>
+<view class="cells">
+    <view class="cell">
+        <button hoverClass="none" openType="share">分享给好友</button>
+    </view>
+</view>

@@ -1,0 +1,49 @@
+.ico_image {
+    width: 66rpx;
+    height: 64rpx;
+}
+
+.my-body-list-items {
+    width: 100%;
+    padding-left: 30rpx;
+    display: flex;
+    flex-direction: row;
+    line-height: 45px;
+    margin-top: 15rpx;
+}
+
+.items-coler {
+    background: #ccc;
+}
+
+.list-items-hr {
+    background-color: #ccc;
+    height: 1rpx;
+    width: 90%;
+}
+
+.hot-tips-pancel-image {
+    display: flex;
+    margin-top: 15rpx;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+}
+
+.image_kuang_right {
+    margin-right: 10rpx;
+    margin-left: 10rpx;
+}
+
+.image-kuan {
+    width: 230rpx;
+    height: 235rpx;
+}
+
+.cang_content_msg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}

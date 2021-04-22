@@ -1,0 +1,19 @@
+<view id="view_ads">
+    <ad adTheme="white" adType="video" unitId="视频广告"></ad>
+</view>
+<view wx:if="{{biaoqingCollectionList==''}}">
+    <view class="cang_content_msg">
+        <text>亲，你还没有收藏表情包哟</text>
+    </view>
+</view>
+<view wx:if="{{biaoqingCollectionList!=''}}">
+    <view class="hot-tips-pancel-image">
+        <view data-index="{{index}}" data-keyword="{{biaoqingCollectionList}}" wx:for="{{biaoqingCollectionList}}" wx:key="item">
+            <view class="image_kuang_right">
+                <view bindtap="btn_info_cang" data-keyword="{{item}}">
+                    <image class="image-kuan" src="{{item.imagePath}}"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
