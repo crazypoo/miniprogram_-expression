@@ -137,12 +137,12 @@ Page({
     },
     onLoad: function(e) {
         wx.createInterstitialAd && ((t = wx.createInterstitialAd({
-            adUnitId: "插屏广告"
+            adUnitId: "adunit-2ec25256607aba17"
         })).onLoad(function() {}), t.onError(function(t) {}), t.onClose(function() {})), 
         t && t.show().catch(function(t) {
             console.error(t);
         }), wx.createRewardedVideoAd && ((a = wx.createRewardedVideoAd({
-            adUnitId: "激励视频广告"
+            adUnitId: "adunit-b90ed4d50029a144"
         })).onLoad(function() {}), a.onError(function(t) {}), a.onClose(function(t) {
             t && t.isEnded || void 0 === t ? (wx.setStorageSync("bqb_creditsAmountSum", 100), 
             wx.showModal({

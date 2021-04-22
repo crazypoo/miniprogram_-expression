@@ -143,7 +143,7 @@ getApp(), Page((e = {
     },
     onLoad: function(a) {
         wx.setStorageSync("creditsAmountSum", 0), wx.createRewardedVideoAd && ((n = wx.createRewardedVideoAd({
-            adUnitId: "激励视频广告"
+            adUnitId: "adunit-b90ed4d50029a144"
         })).onLoad(function() {}), n.onError(function(a) {}), n.onClose(function(a) {
             a && a.isEnded || void 0 === a ? (wx.setStorageSync("bqb_creditsAmountSum", 100), 
             wx.showModal({

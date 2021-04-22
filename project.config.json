@@ -23,7 +23,7 @@
     "compileHotReLoad": false,
     "useMultiFrameRuntime": true,
     "useApiHook": true,
-    "useApiHostProcess": false,
+    "useApiHostProcess": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -41,14 +41,14 @@
   },
   "compileType": "miniprogram",
   "libVersion": "2.14.4",
-  "projectname": "miniprogram-1",
+  "projectname": "小迪云表情包",
   "debugOptions": {
     "hidedInDevtools": []
   },
   "isGameTourist": false,
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
-  "appid": "wxbaa84df90fb24dfb",
+  "appid": "wx72b19bd17c3ec9b7",
   "condition": {
     "search": {
       "list": []
